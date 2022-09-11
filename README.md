@@ -13,4 +13,4 @@ All the html is created dynamically with javascript.
 
 Also a function is created to show the balances in red if they are negative.
 
-<img src="src/images/screen-img.png" width="50%">
+<img src="src/images/screen-img.png" width="70%">
