@@ -1,15 +1,16 @@
-const Clients = require("./data-business");
-const ClientBusiness = require("./client-business");
+const Clients = require('./data-business');
+const ClientBusiness = require('./client-business');
 
 function printClientsAccounts() {
-    const clients = Clients.getClients();
-    const ul = document.createElement("ul");
-    for (let client of clients) {
-      const element = ClientBusiness.getClientElement(client);
-      ul.appendChild(element);
-    }
-  
-    document.getElementById("root").appendChild(ul);
-  };
+  const clients = Clients.getClients();
+  const div = document.createElement('div');
+  div.setAttribute('class', 'container');
+  for (let client of clients) {
+    const element = ClientBusiness.getClientElement(client);
+    div.appendChild(element);
+  }
 
-  module.exports = { printClientsAccounts };
+  document.getElementById('root').appendChild(div);
+}
+
+module.exports = { printClientsAccounts };
